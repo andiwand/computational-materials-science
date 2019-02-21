@@ -128,7 +128,7 @@ def part1(annihilators, fermions, t, Umin, Umax, Usteps):
     Es = np.array(Es)
     Ss = np.array(Ss)
     
-    for i in range(min(8, Es.shape[1])):
+    for i in range(min(100, Es.shape[1])):
         plt.plot(Us, Es[:,i], label='E%d' % i)
     plt.xlabel('U')
     plt.ylabel('Ei')
@@ -139,7 +139,7 @@ def part1(annihilators, fermions, t, Umin, Umax, Usteps):
     plt.xlabel('U')
     plt.ylabel('S(gs)')
     plt.show()
-part1(annihilators, fermions, 1.0, 0.0, 4.0, 17)
+#part1(annihilators, fermions, 1.0, 0.0, 4.0, 50)
 
 def part2(annihilators, fermions, t, U, Tmin, Tmax, Tsteps):
     Ts = np.linspace(Tmin, Tmax, num=Tsteps)
@@ -162,5 +162,5 @@ def part2(annihilators, fermions, t, U, Tmin, Tmax, Tsteps):
     plt.ylabel('S')
     plt.xlabel('T')
     plt.show()
-part2(annihilators, fermions, 1.0, 1.0, 0.01, 1.0, 11)
+part2(annihilators, fermions, 1.0, 1.0, 0.01, 10.0, 500)
 
